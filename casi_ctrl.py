@@ -9,11 +9,14 @@ from numpy import *
 close("all")
 f, ax = subplots()
 
+# not normalized
 # ax.plot(array(nnc.x_value())+24,nnc.CaSi(),'o-', label='no nano')
 # ax.plot(array(nc.x_value())+24,nc.CaSi(),'o-', label='nano')
 
-ax.plot(array(nnc.x_value())+24,nnc.peak_casi(),'o-', label='no nano')
-ax.plot(array(nc.x_value())+24,nc.peak_casi(),'o-', label='nano')
+# normalized
+ax.plot(array(nnc.x_value()[0:-1])+24,nnc.peak_casi()[0:-1],'o-', label='no nano')
+ax.plot(array(nc.x_value()[0:-1])+24,nc.peak_casi()[0:-1],'o-', label='nano')
+
 
 legend(loc = 0)
 xlabel('time, hour')
