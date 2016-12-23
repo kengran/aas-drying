@@ -30,7 +30,7 @@ def Readfile():
     # file_name.append('/Users/hty/Google Drive/research/aas drying/APS_Dec/Blake_Samples/mod/SC_7_scan_20-00000_scaled_wrt_kapton.gr')
 
     [data_files_1.append(file(file_name[i])) for i in range (1,shape(file_name)[0])]
-    good_data_number = [0,1,4,5, 6,7]
+    good_data_number = [0,1,4,5, 6]
     return data_files_1, file_name, good_data_number
 
 

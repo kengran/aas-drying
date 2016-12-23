@@ -26,7 +26,7 @@ def Readfile():
 
     data_files_1=[file(file_name[i]) for i in range (0,shape(file_name)[0])]
 
-    good_data_number = [0,1,3,6,7,8]
+    good_data_number = [0,1,3,6, 7]
     return data_files_1, file_name, good_data_number
 
 def peak_sisi():
