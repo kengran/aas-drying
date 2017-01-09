@@ -14,7 +14,7 @@ import sys
 # sys.path.append('/Users/hty/Google Drive/research/aas drying/white aas kinetics data')
 
 '''import the target file'''
-import nano_ctrl as targetFile
+import noNano_ctrl as targetFile
 
 import peak_assign as pn
 
@@ -54,11 +54,11 @@ ax0 = subplot(gs[0])
 num_of_peak_showed = arange(9)
 num_of_peak_showed = append(num_of_peak_showed, [-3, -2, -1])
 
-lengthOftheLine = [0.92,0.8,0.85,0.8,0.8,0.8,0.8,0.8,0.8,0.8, 0.8, 0.8]
-[ax0.axvline(pn.find_local_max(interm2_syn)[1][i],ymin=0,ymax=lengthOftheLine[i],color='k') for i in num_of_peak_showed]
+lengthOftheLine = [0.91, 0.3, 0.73, 0.4, 0.6, 0.8, 0.6, 0.55, 0.6, 0.8, 0.8, 0.8]
+[ax0.axvline(pn.find_local_max(interm2_syn)[1][i],ymin=0,ymax=lengthOftheLine[i],color='k',linewidth=0.8) for i in num_of_peak_showed]
 
 #add names of the peaks
-position_y = [3.5, 0, 2.5 , 1, 2.2, 3.2, 2, 1, 1.5]
+position_y = [3.5, -0.5, 2.5 , 0, 1.5, 2.7, 1.8, 1, 1.5]
 [ax0.text(pn.find_local_max(interm2_syn)[1][i],position_y[i], pn.name_of_the_peak(interm2_syn)[i],horizontalalignment='center',fontsize=14) for i in num_of_peak_showed]
 
 #increase the freq of the ticks
