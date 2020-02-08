@@ -10,8 +10,13 @@ import peak_assign as pn
 
 close("all")
 f, ax = subplots(figsize=(20,6))
+<<<<<<< HEAD
+name_of_the_plot_nc=['%s h'%(array(nonano.x_value(nonano.Readfile)[i])) for i in range (shape(nonano.x_value(nonano.Readfile))[0])]
+name_of_the_plot_nnc=['%s h'%(array(nnc.x_value(nnc.Readfile)[i])) for i in range (shape(nnc.x_value(nnc.Readfile))[0])]
+=======
 name_of_the_plot_nc=['%s h'%(array(nonano.x_value()[i])) for i in range (shape(nonano.x_value())[0])]
 name_of_the_plot_nnc=['%s h'%(array(nnc.x_value()[i])) for i in range (shape(nnc.x_value())[0])]
+>>>>>>> 4fd4d8775961b746663b468da51d99862c5c9d2e
 
 [ax.plot(nonano.curve()[i][0],(np.array(nonano.curve()[i][1])-array(nonano.curve()[0][1]))*10 , '-',alpha=1,label='no nano, %s - 0 h'%(name_of_the_plot_nc[i])) for i in nonano.Readfile()[2]]
 

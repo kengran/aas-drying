@@ -94,6 +94,19 @@ def x_value(which_read_file_fn):
     x_val = which_read_file_fn()[3]
     return array(x_val)+24
 
+def x_value():
+    x_val = [
+    4,#4.35,
+    16,#16.38,
+    24,#23.95,
+    38,#38.18,
+    43,#43.15,
+    54,#54.47,
+    3600,#3576,
+    #6701.98
+    ]
+    return x_val
+
 def pLot():
     close("all")
     f, ax = plt.subplots()
