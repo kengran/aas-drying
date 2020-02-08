@@ -68,6 +68,7 @@ def Readfile():
 
     data_files_1=[file(file_name[i]) for i in range (0,shape(file_name)[0])]
 
+<<<<<<< HEAD
     good_data_number = range(len(file_name))
     # good_data_number = [0,1,3,6,7]
     return data_files_1, file_name, good_data_number, x_val
@@ -78,6 +79,32 @@ def norm_peak(which_peak, which_read_file_fn):
 def x_value(which_read_file_fn):
     x_val = which_read_file_fn()[3]
     return array(x_val)+24
+=======
+    good_data_number = [0,1,3,6, 7]
+    return data_files_1, file_name, good_data_number
+
+def peak_sisi():
+    sisi_sio = gd.sisi_sio(Readfile()[0],141)
+    return sisi_sio
+
+def peak_casi():
+    casi_sio = gd.casi_sio(Readfile()[0],141)
+    return casi_sio
+
+def x_value():
+    x_val = [
+    0,
+    9,#8.5,
+    23,#22.58,
+    30,#29.75,
+    44,#44.01,
+    49,#49.01,
+    60,#60.28,
+    3600,#3582,
+    #6707.98
+    ]
+    return x_val
+>>>>>>> 4fd4d8775961b746663b468da51d99862c5c9d2e
 
 def curve():
     xy = gd.curve(Readfile()[0], 141)

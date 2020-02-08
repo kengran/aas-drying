@@ -11,9 +11,8 @@ def find_local_max(interm2_syn):
     local_max = [(diff(sign(diff(interm2_syn[i][1]))) < 0).nonzero()[0] + 1 for i in range (shape(interm2_syn)[0])]
 
     peakPosition=[interm2_syn[0][0][local_max[0][4]],interm2_syn[0][0][local_max[0][5]],
-        interm2_syn[0][0][local_max[0][6]],2.6,
-        interm2_syn[0][0][local_max[0][7]],interm2_syn[0][0][local_max[0][8]],
-        3.9,interm2_syn[0][0][local_max[0][9]],
+        interm2_syn[0][0][local_max[0][6]],2.8,interm2_syn[0][0][local_max[0][7]],
+        interm2_syn[0][0][local_max[0][8]],3.9,interm2_syn[0][0][local_max[0][9]],
         interm2_syn[0][0][local_max[0][10]],
 
         # peak position after 15A

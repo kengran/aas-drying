@@ -21,6 +21,10 @@ font = {'family' : 'normal',
 matplotlib.rc('font', **font)
 ''
 def Readfile():
+<<<<<<< HEAD
+=======
+    #   read in files
+>>>>>>> 4fd4d8775961b746663b468da51d99862c5c9d2e
     file_name = ['/Users/hty/Google Drive/research/aas drying/aps_feb/chi_files/nano_7perc_0rh/AAS_np_7p_0rh_Feb26_2223-00000.gr']
     data_files_1=[file(file_name[0])]
     x_value = [0]
@@ -50,6 +54,7 @@ def Readfile():
 
     return x_value,data_files_1,file_name
 
+<<<<<<< HEAD
 
 def read_file_with_low_angle_info():
     '''read in files that contains low angle info'''
@@ -95,6 +100,20 @@ def read_reciprocal_space_files(suffix):
 
 def peaks(which_read_file_fn):
     interm_syn = [np.array(which_read_file_fn()[1][i].readlines()) for i in range (np.shape(which_read_file_fn()[1])[0])]
+=======
+def read_reciprocal_space_files(suffix):
+    input_name = Readfile()[2]
+    new_name = [input_name[i][:-3]+suffix for i in range (shape (input_name)[0])]
+    data_files_1 = [file(new_name[i]) for i in range (shape (input_name)[0])]
+
+    name_float = array(Readfile()[0])*2.5/60
+    name_str=["{0:.2f}".format(name_float[i]) for i in range (shape(name_float)[0])]
+
+    return  data_files_1, name_str
+
+def peaks():
+    interm_syn = [np.array(Readfile()[1][i].readlines()) for i in range (np.shape(Readfile()[1])[0])]
+>>>>>>> 4fd4d8775961b746663b468da51d99862c5c9d2e
 
     ''' remember to set start line number here '''
     interm1_syn =[ [str.split(interm_syn[j][i]) for i in range(141,np.shape(interm_syn[j])[0])] for j in range (np.shape(interm_syn)[0])]
@@ -124,18 +143,26 @@ def peaks(which_read_file_fn):
     sisi_SiO = array(value_of_sisi)/array(value_of_SiO)
     CaSi_SiO=array(value_of_CaSi)/array(value_of_SiO)
 
+<<<<<<< HEAD
     name_float = array(which_read_file_fn()[0])*2.5/60
     name_str=["{0:.1f}".format(name_float[i]) for i in range (shape(name_float)[0])]
+=======
+    name_float = array(Readfile()[0])*2.5/60
+    name_str=["{0:.2f}".format(name_float[i]) for i in range (shape(name_float)[0])]
+>>>>>>> 4fd4d8775961b746663b468da51d99862c5c9d2e
 
     return name_str,sisi_SiO, CaSi_SiO
 
 
+<<<<<<< HEAD
 def peak_Si_T(which_read_file_fn):
     return peaks(which_read_file_fn)[1]
 
 def peak_Ca_T(which_read_file_fn):
     return peaks(which_read_file_fn)[2]
 
+=======
+>>>>>>> 4fd4d8775961b746663b468da51d99862c5c9d2e
 def pLot(sAve):
     close("all")
     f, ax = subplots()
